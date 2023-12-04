@@ -72,3 +72,27 @@ cout << character('Z', -1)<<endl;
 cout << character('?', 5)<<endl;
 cout << character('A', 32)<<endl;
 }
+//Part B starts here
+//"half" that accept a single argument, and return a value of that same type
+template<typename W> W half(W val) {
+    return val / 2;
+}
+
+int half(int val) {
+    if (val % 2 == 0) return val / 2;
+    else return (int)(val / 2) + 1;
+}
+//return half of the value passed in as argument
+//Rounding
+int main()
+{
+    double a = 7.1;
+    float b = 5.0f;
+    int c = 3;
+
+    cout << half(a) << endl;
+    cout << half(b) << endl;
+    cout << half(c) << endl;
+
+    return 0;
+}
